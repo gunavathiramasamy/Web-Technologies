@@ -55,6 +55,6 @@ public/index.html
 To run the server
 node server.js
 Verify the server running
-    Server running on http://localhost:3000
-    Connected to MySQL!
+🚀 Server running on http://localhost:3000
+✅ Connected to MySQL!
 Open browser at:  http://localhost:3000
