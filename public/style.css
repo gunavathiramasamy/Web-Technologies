@@ -1,0 +1,4 @@
+body { font-family: Arial; margin: 20px; }
+form input { margin: 5px; padding: 8px; }
+button { padding: 8px 12px; background: green; color: white; border: none; cursor: pointer; }
+#studentList p { margin: 5px 0; }
