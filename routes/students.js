@@ -1,15 +1,15 @@
-const express = require("express");
-const router = express.Router();
-const db = require("../db");
+const express = require("express");//A framework for building web servers
+const router = express.Router();//Create a new router object to define routes related to "students"
+const db = require("../db"); //Go up one folder
 
 // CREATE
-router.post("/", (req, res) => {
+router.post("/", (req, res) => {       //When a POST request is made to the root URL of this router
   const { name, email, course } = req.body;
   db.query(
-    "INSERT INTO students (name,email,course) VALUES (?,?,?)",
-    [name, email, course],
-    (err, result) => {
-      if (err) return res.status(500).send(err);
+    "INSERT INTO students (name,email,course) VALUES (?,?,?)", //SQL query to insert a new student record into the "students" table
+    [name, email, course], //Values to be inserted into the query placeholders
+    (err, result) => {   //Callback function to handle the result of the query
+      if (err) return res.status(500).send(err); //If there's an error, send a 500 status with the error message
       res.send("Student added!");
     }
   );
