@@ -1,6 +1,31 @@
-let editingId = null;
+let editingId = null;// To track if we are editing an existing student
 
 // Load all students
+//Function syntax
+/*// Define an async function
+async function functionName() {
+  
+  // Step 1: Fetch data from a given URL (API endpoint)
+  const response = await fetch("URL");
+
+  // Step 2: Convert the response into JSON format
+  const data = await response.json();
+
+  // Step 3: Update the DOM (HTML element) with the fetched data
+  document.getElementById("elementId").innerHTML = data
+    .map(
+      (item) => `
+        <p>
+          ${item.property1} - ${item.property2} - ${item.property3}
+          <button onclick="editFunction(${item.id}, '${item.property1}', '${item.property2}')">Edit</button>
+          <button onclick="deleteFunction(${item.id})">Delete</button>
+        </p>
+      `
+    )
+    .join(""); // Join array into a single string
+}*/
+
+
 async function loadStudents() {
   const res = await fetch("/students");
   const students = await res.json();
